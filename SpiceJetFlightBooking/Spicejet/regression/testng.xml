@@ -3,12 +3,12 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-					<class name="Maven_Mini_Project.Spicejet.FIrst_SignUp_Part" />
+					<class name="Maven_Mini_Project.Spicejet.First_SignUp_Part" />
 					<class name="Maven_Mini_Project.Spicejet.Second_Login_Part" />
-					<class name="Maven_Mini_Project.Spicejet.Third_Search_Flight" />
-					<class name="Maven_Mini_Project.Spicejet.Four_Select_Flight" />
-					<class name="Maven_Mini_Project.Spicejet.Five_Payment_Information" />
-					<class name="Maven_Mini_Project.Spicejet.Six_Booking_Conformation" />
+					<class name="Maven_Mini_Project.Spicejet.Third_Search_Flight_Part" />
+					<class name="Maven_Mini_Project.Spicejet.Four_Flight_Select_Part" />
+					<class name="Maven_Mini_Project.Spicejet.Five_Payment_Details_Part" />
+					<class name="Maven_Mini_Project.Spicejet.Six_Conformation_Part" />
 					<class name="Maven_Mini_Project.Spicejet.Seven_Validation_Part" />
       </classes>
   </test> <!-- Test -->
