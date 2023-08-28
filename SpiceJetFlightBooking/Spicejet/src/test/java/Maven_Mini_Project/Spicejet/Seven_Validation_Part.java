@@ -14,9 +14,9 @@ import org.testng.annotations.AfterTest;
 
 public class Seven_Validation_Part {
 	@Test
-	public void f() {
+	public void testcase() {
 		WebDriver driver = new ChromeDriver();
-		System.setProperty("WebDriver.Chrome.driver", "C:\\Users\\JESUS\\Downloads\\chromedriver-win32\\chromedriver");
+		System.setProperty("WebDriver.Chrome.driver", "C:\\Users\\ELCOT\\Desktop\\SEL\\chromedriver.exe");
 		driver.get("https://spiceclub.spicejet.com/signup");
 		driver.manage().window().maximize();
 
@@ -38,6 +38,7 @@ public class Seven_Validation_Part {
 
 	@BeforeMethod
 	public void beforeMethod() {
+		WebDriver driver = null;
 		// Click on "One Way" radio button
 		WebElement oneWayRadioButton = driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0"));
 		oneWayRadioButton.click();
@@ -46,6 +47,7 @@ public class Seven_Validation_Part {
 
 	@AfterMethod
 	public void afterMethod() {
+		WebDriver driver = null;
 		// Enter origin and destination for one-way trip
 		WebElement originInput = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
 		originInput.sendKeys("SourceCity");
@@ -57,6 +59,7 @@ public class Seven_Validation_Part {
 
 	@BeforeClass
 	public void beforeClass() {
+		WebDriver driver = null;
 		// Select departure date for one-way trip
 		WebElement departureDateInput = driver.findElement(By.id("ctl00_mainContent_view_date1"));
 		departureDateInput.sendKeys("2023-09-01");
@@ -64,6 +67,7 @@ public class Seven_Validation_Part {
 
 	@AfterClass
 	public void afterClass() {
+		WebElement searchButton;
 		// Click on "Search" button
 		searchButton.click();
 	}
@@ -71,6 +75,7 @@ public class Seven_Validation_Part {
 	@BeforeTest
 	public void beforeTest() {
 		// Validate "Check-in" link
+		WebDriver driver = null;
 		WebElement checkInLink = driver.findElement(By.linkText("Check-in"));
 		if (checkInLink.isDisplayed() && checkInLink.isEnabled()) {
 			System.out.println("Check-in link is available and enabled.");
@@ -86,9 +91,10 @@ public class Seven_Validation_Part {
 			System.out.println("Flight status link is not available or enabled.");
 		}
 	}
-
+	WebDriver driver = null;
 	// Validate "Manage Booking" link
-	WebElement manageBookingLink = driver.findElement(By.linkText("Manage Booking"));if(manageBookingLink.isDisplayed()&&manageBookingLink.isEnabled())
+	WebElement manageBookingLink = driver.findElement(By.linkText("Manage Booking"));
+	if(manageBookingLink.isDisplayed()&&manageBookingLink.isEnabled())
 	{
 		System.out.println("Manage Booking link is available and enabled.");
 	}else

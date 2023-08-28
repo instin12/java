@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import org.testng.annotations.Test;
@@ -17,7 +18,7 @@ public class Second_Login_Part {
 	public void testCase() {
 
 		WebDriver driver = new ChromeDriver();
-		System.setProperty("WebDriver.Chrome.driver", "C:\\Users\\JESUS\\Downloads\\chromedriver-win32\\chromedriver");
+		System.setProperty("WebDriver.Chrome.driver", "C:\\Users\\ELCOT\\Desktop\\SEL\\chromedriver.exe");
 		driver.get("https://spiceclub.spicejet.com/signup");
 		driver.manage().window().maximize();
 
@@ -40,27 +41,27 @@ public class Second_Login_Part {
 	@BeforeClass
 	public void beforeClass() {
 
-		By driver;
+		WebDriver driver = null;
 		// Click on "Login / Signup" link
-		WebElement loginLink = driver.findElement((SearchContext) By.id("ctl00_HyperLinkLogin"));
+		WebElement loginLink = driver.findElement((By) By.id("ctl00_HyperLinkLogin"));
 		loginLink.click();
 
+		FluentWait<WebDriver> wait = null;
 		// Wait for login modal to appear
 		WebElement loginModal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("LoginModal")));
 
 		// Fill in email and password
 		WebElement emailInput = loginModal.findElement(By.id("ctl00_mainContent_txtlogin"));
-		emailInput.sendKeys("dummy@example.com");
+		emailInput.sendKeys("Dhanush.kalai21@gmail.com");
 
 		WebElement passwordInput = loginModal.findElement(By.id("ctl00_mainContent_txtpassword"));
-		passwordInput.sendKeys("password123");
+		passwordInput.sendKeys("pass@4321");
 
 		// Click on "Login" button
 		WebElement loginButton = loginModal.findElement(By.id("ctl00_mainContent_btnLogin"));
 		loginButton.click();
 
-		// Wait for successful login or error message
-
+		
 	}
 
 	@AfterClass
