@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+					<class name="Maven_Mini_Project.Spicejet.FIrst_SignUp_Part" />
+					<class name="Maven_Mini_Project.Spicejet.Second_Login_Part" />
+					<class name="Maven_Mini_Project.Spicejet.Third_Search_Flight" />
+					<class name="Maven_Mini_Project.Spicejet.Four_Select_Flight" />
+					<class name="Maven_Mini_Project.Spicejet.Five_Payment_Information" />
+					<class name="Maven_Mini_Project.Spicejet.Six_Booking_Conformation" />
+					<class name="Maven_Mini_Project.Spicejet.Seven_Validation_Part" />
+      </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
