@@ -48,8 +48,15 @@ public class Four_Flight_select_Part {
 		oneWayRadioButton.click();
 
 		// Enter origin and destination for one-way trip
-
+		WebElement originInput = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
+		originInput.sendKeys("SourceCity");
+		
+		WebElement destinationInput = driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT"));
+		destinationInput.sendKeys("DestinationCity");
+		
 		// Enter departure date
+		WebElement departureDateInput = driver.findElement(By.id("ctl00_mainContent_view_date1"));
+		departureDateInput.sendKeys("2023-09-10");
 
 		// Click on "Search" button
 		WebElement searchButton = driver.findElement(By.id("ctl00_mainContent_btn_FindFlights"));
